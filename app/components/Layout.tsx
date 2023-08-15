@@ -112,7 +112,9 @@ function CartDrawer({isOpen, onClose}: {isOpen: boolean; onClose: () => void}) {
       <div className="grid">
         <Suspense fallback={<CartLoading />}>
           <Await resolve={root.data?.cart}>
-            {(cart) => <Cart layout="drawer" onClose={onClose} cart={cart} />}
+            {(cart) => {
+              return <Cart layout="drawer" onClose={onClose} cart={cart} />;
+            }}
           </Await>
         </Suspense>
       </div>

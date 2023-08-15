@@ -89,6 +89,11 @@ export default function Homepage() {
 
   return (
     <>
+      <div className=" h-screen bg-teal-800 flex">
+        <div className="m-auto font-bold text-white text-[42px]">
+          Padelio raketės
+        </div>
+      </div>
       {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
       )}
